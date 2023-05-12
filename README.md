@@ -1,12 +1,14 @@
-# Grafana
+![](https://grafana.com/static/assets/internal/grafana_logo-web-white-text.svg)
 
-## Install Grafana on Debian or Ubuntu
+---------------------------------------------------------------
+
+### Install Grafana on Debian or Ubuntu
 
 - This topic explains how to install Grafana dependencies, install Grafana on Linux Debian or Ubuntu, and start the Grafana server on your Debian or Ubuntu system.
 
- - There are multiple ways to install Grafana: using the Grafana Labs APT repository, by downloading a .deb package, or by downloading a binary .tar.gz file. Choose only one of the methods below that best suits your needs.
+ - There are multiple ways to install Grafana: using the Grafana Labs APT repository, by downloading a .deb package, or by downloading a binary `.tar.gz` file. Choose only one of the methods below that best suits your needs.
 
-### Install from APT repository
+#### Install from APT repository
 
 - [ ] 1  **To install required packages and download the Grafana repository signing key, run the following commands:**
 
@@ -33,4 +35,6 @@
       sudo apt-get install grafana
 
       # Install the latest Enterprise release:
-      sudo apt-get install grafana-enterprise    
+      sudo apt-get install grafana-enterprise
+      
+>Source: https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/#install-from-apt-repository
