@@ -38,3 +38,5 @@
       sudo apt-get install grafana-enterprise
       
 >Source: https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/#install-from-apt-repository
+
+![](https://uploaddeimagens.com.br/images/004/463/466/full/st_small_507x507-pad_600x600_f8f8f8-removebg-preview_%281%29.png?1683896989)
