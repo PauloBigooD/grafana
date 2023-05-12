@@ -1,75 +1,42 @@
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Docker_%28container_engine%29_logo.svg/320px-Docker_%28container_engine%29_logo.svg.png)
-
-
 ![](https://grafana.com/static/assets/internal/grafana_logo-web-white-text.svg)
 
-#### Instruções para subir o Docker-Compose - Sistemas Debian ####
+---------------------------------------------------------------
 
-####--Primeiramente precisamos instalar algumas dependências--####
+### Install Grafana on Debian or Ubuntu
 
-    apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common bash-completion
-    
-####--Para instalar as dependências utilizamos o seguinte comando--####
+- This topic explains how to install Grafana dependencies, install Grafana on Linux Debian or Ubuntu, and start the Grafana server on your Debian or Ubuntu system.
 
-     apt-get update                                                                                                
-     apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common bash-completion -y 
-     
-####--Agora é preciso adicionar a public key especifica para o Docker--####
+ - There are multiple ways to install Grafana: using the Grafana Labs APT repository, by downloading a .deb package, or by downloading a binary `.tar.gz` file. Choose only one of the methods below that best suits your needs.
 
-     curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | apt-key add -    
-    
-####--O próximo passo agora é adicionar o repositório Docker--####
+#### Install from APT repository
 
-     add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") $(lsb_release -cs) stable" 
-    
-####--Feito isso, agora podemos finalmente instalar o Docker-ce com o seguinte comando--####
+- [ ] 1  **To install required packages and download the Grafana repository signing key, run the following commands:**
 
-     apt install docker-ce 
-    
+      sudo apt-get install -y apt-transport-https
+  
+      sudo apt-get install -y software-properties-common wget
+  
+      sudo wget -q -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.key
 
-####--Neste momento o Docker já se encontra devidadente instalado, com isso podemos verificar a versão do Docker instalado--####
+- [ ] 2  **To add a repository for stable releases, run the following command:**
 
-     docker version 
+      echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
 
-####--Para setar o restart automático do Docker.service executamos o seguinte comando--####
+- [ ] 3  **To add a repository for beta releases, run the following command:**
 
-     systemctl enable docker 
-   
-####--Instalando o Docker-Compose--###
+      echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com beta main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+      
+- [ ] 4  **After you add the repository, run the following commands to install the OSS or Enterprise release:**
 
-     curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose 
-     chmod +x /usr/local/bin/docker-compose                                                                                                  
+      # Update the list of available packages
+      sudo apt-get update
 
-####--Para checar a versão do Docker-Compose usamos o seguinte comando--####
+      # Install the latest OSS release:
+      sudo apt-get install grafana
 
-     docker-compose version 
+      # Install the latest Enterprise release:
+      sudo apt-get install grafana-enterprise
+      
+>Source: https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/#install-from-apt-repository
 
-
-############################# Lista de comandos Docker ##############################
-
--> Listar todos os containers em execusão 
-    docker ps
-    
--> Listar todos os containers que estão em execução ou não
-    
-    docker ps -a
-    
--> Start, Stop, Restart, Remove
-    
-    docker start   "Id-Container"
-    docker stop    "Id-Container"
-    docker restart "Id-Container"
-    docker rm      "Id-Container"
-    
-    docker rm   -f "Id-Container" <--> OBS: Se o container estiver em execusão pode ser preciso forçar a remoção
-    
--> Listar imagens dos containers
-
-    docker images
-    
--> Verificar uso do container
-    
-    docker stats
-
-
-Fonte : https://docs.docker.com/engine/reference/commandline/docker/
+![](https://uploaddeimagens.com.br/images/004/463/466/full/st_small_507x507-pad_600x600_f8f8f8-removebg-preview_%281%29.png?1683896989)
