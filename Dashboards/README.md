@@ -1,5 +1,6 @@
 ![](https://grafana.com/static/assets/internal/grafana_logo-web-white-text.svg)
 
+---
 
 ## Zabbix plugin for Grafana
 
