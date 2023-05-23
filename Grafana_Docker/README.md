@@ -81,32 +81,132 @@ Before you install Docker Engine for the first time on a new host machine, you n
 
       docker-compose version 
 
+--------
 
-############################# Lista de comandos Docker ##############################
+## Lista de comandos Docker 
 
--> Listar todos os containers em execusão 
-    docker ps
+-> **Listar todos os containers que estão em execução ou não**
     
--> Listar todos os containers que estão em execução ou não
-    
-    docker ps -a
-    
--> Start, Stop, Restart, Remove
-    
-    docker start   "Id-Container"
-    docker stop    "Id-Container"
-    docker restart "Id-Container"
-    docker rm      "Id-Container"
-    
-    docker rm   -f "Id-Container" <--> OBS: Se o container estiver em execusão pode ser preciso forçar a remoção
-    
--> Listar imagens dos containers
+    docker ps [OPTIONS]
 
-    docker images
-    
--> Verificar uso do container
-    
-    docker stats
+-- Options:
 
+`-a, --all`             -> Show all containers (default shows just running)
+
+`-f, --filter filter`   -> Filter output based on conditions provided
+
+`--format string`       -> Pretty-print containers using a Go template
+
+`-n, --last int`        -> Show n last created containers (includes all states) (default -1)
+
+`-l, --latest`          -> Show the latest created container (includes all states)
+
+`--no-trunc`            -> Don't truncate output
+
+`-q, --quiet`           -> Only display container IDs
+
+`-s, --size`            -> Display total file sizes
+
+----
+
+-> **Iniciar um ou mais containers que estejam parados**
+
+    docker start [OPTIONS] CONTAINER [CONTAINER...]
+
+-- Options:
+
+`-a, --attach`           -> Attach STDOUT/STDERR and forward signals
+
+`--detach-keys string`   -> Override the key sequence for detaching a container
+
+`-i, --interactive`      -> Attach container's STDIN
+
+----
+
+-> **Pausar um ou mais conteiners que estejam em execução**
+
+    docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+-- Options:
+
+`-t, --time int`   -> Seconds to wait for stop before killing it (default 10)
+
+----
+
+-> **Reiniciar um ou mais conteiners**
+
+    docker restart [OPTIONS] CONTAINER [CONTAINER...]
+
+-- Options:
+
+`-t, --time int`   -> Seconds to wait for stop before killing it (default 10)
+
+----
+
+-> **Remover um ou mais conteiners**
+
+    docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+-- Options:
+
+`-f, --force`     -> Force the removal of a running container (uses SIGKILL)
+
+`-l, --link`      -> Remove the specified link
+
+`-v, --volumes`   -> Remove anonymous volumes associated with the container
+
+----
+
+-> **Listar imagens dos containers**
+
+    docker images [OPTIONS] [REPOSITORY[:TAG]]
+
+-- Options:
+
+`-a, --all`             -> Show all images (default hides intermediate images)
+
+`--digests`             -> Show digests
+
+`-f, --filter filter`   -> Filter output based on conditions provided
+
+`--format string `      -> Pretty-print images using a Go template
+
+`--no-trunc`            -> Don't truncate output
+
+`-q, --quiet`           -> Only show image IDs
+
+---- 
+
+-> **Verificar uso do container**
+    
+    docker stats [OPTIONS] [CONTAINER...]
+
+-- Options:
+
+`-a, --all`         -> Show all containers (default shows just running)
+      
+`--format string`   -> Pretty-print images using a Go template
+
+`--no-stream`       -> Disable streaming stats and only pull the first result
+
+`--no-trunc`        -> Do not truncate output
+
+----
+
+-> **Gerenciamento dos volumes no Docker**
+
+    docker volume COMMAND
+
+-- Commands:
+
+`create`     -> Create a volume
+
+`inspect`    -> Display detailed information on one or more volumes
+
+`ls`         -> List volumes
+
+`prune`      -> Remove all unused local volumes
+
+`rm`         -> Remove one or more volumes
 
 Fonte : https://docs.docker.com/engine/reference/commandline/docker/
