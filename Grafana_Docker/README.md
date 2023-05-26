@@ -209,4 +209,13 @@ Before you install Docker Engine for the first time on a new host machine, you n
 
 `rm`         -> Remove one or more volumes
 
+-> **Executa uma instrução dentro do container que está rodando sem precisar atachar nele**
+
+-> **Exibe o json com todas as configurações do container**
+
+-> **Clusterização das aplicações em uma orquestração de várias containers**
+
+-> **Clusterização das aplicações em uma orquestração de várias containers**
+
+
 Fonte : https://docs.docker.com/engine/reference/commandline/docker/
