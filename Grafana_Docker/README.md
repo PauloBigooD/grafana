@@ -209,13 +209,83 @@ Before you install Docker Engine for the first time on a new host machine, you n
 
 `rm`         -> Remove one or more volumes
 
+----
+
 -> **Executa uma instrução dentro do container que está rodando sem precisar atachar nele**
+
+      docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+      
+-- Aliases:
+      
+      docker container exec, docker exec
+      
+-- Commands:
+
+  `-d, --detach`     -> Detached mode: run command in the background
+  
+  `--detach-keys string`     -> Override the key sequence for detaching a container
+  
+  `-e, --env list`     -> Set environment variables
+  
+   `--env-file list`     -> Read in a file of environment variables
+      
+  `-i, --interactive`     -> Keep STDIN open even if not attached
+  
+  `--privileged`    -> Give extended privileges to the command
+      
+  `-t, --tty`     -> Allocate a pseudo-TTY
+  
+  `-u, --user string`     -> Username or UID (format: "<name|uid>[:<group|gid>]")
+  
+  `-w, --workdir string`     -> Working directory inside the container
+  
+----
 
 -> **Exibe o json com todas as configurações do container**
 
--> **Clusterização das aplicações em uma orquestração de várias containers**
+      docker inspect [OPTIONS] NAME|ID [NAME|ID...]
+      
+-- Commands:
+
+  `-f, --format string`     -> Format output using a custom template:
+                        'json':             Print in JSON format
+                        'TEMPLATE':         Print output using the given
+                        Go template. Refer to https://docs.docker.com/go/formatting/
+                        for more information about formatting output with
+                        templates
+                        
+  `-s, --size`     -> Display total file sizes if the type is container
+  
+  `--type string`     -> Return JSON for specified type
+      
+----
 
 -> **Clusterização das aplicações em uma orquestração de várias containers**
 
+       docker swarm COMMAND
+
+-- Commands:
+
+  `ca`     -> Display and rotate the root CA
+  
+  `init`     -> Initialize a swarm
+  
+  `join`     -> Join a swarm as a node and/or manager
+  
+  `join-token`     -> Manage join tokens
+  
+  `leave`     -> Leave the swarm
+  
+  `unlock`     -> Unlock swarm
+  
+  `unlock-key`     -> Manage the unlock key
+  
+  `update`     -> Update the swarm
+
+----
+
+-> **Clusterização das aplicações em uma orquestração de várias containers**
+
+----
 
 Fonte : https://docs.docker.com/engine/reference/commandline/docker/
