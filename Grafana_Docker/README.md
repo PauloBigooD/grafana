@@ -14,7 +14,7 @@
     * Ubuntu Focal 20.04 (LTS)
     * Ubuntu Bionic 18.04 (LTS)
  
->Docker Engine is compatible with x86_64 (or amd64), armhf, arm64, and s390x architectures.
++ Docker Engine is compatible with `x86_64` (or `amd64`), `armhf`, `arm64`, and `s390x` architectures.
 
 #### Uninstall old versions
 
@@ -74,12 +74,29 @@ Before you install Docker Engine for the first time on a new host machine, you n
 
 ### Install Docker-compose
 
-     curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose 
-     chmod +x /usr/local/bin/docker-compose                                                                                                  
+- [ ] **1. Installing docker-compose**
 
-- [ ] **1. Check the version of the Docker-Compose**
+      curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose 
+      chmod +x /usr/local/bin/docker-compose                                                                                                  
 
-      docker-compose version 
+   - **Check the version of the Docker-Compose**
+
+         docker-compose version 
+
+- [ ] **2. Installing docker-compose using python-pip**
+
+   - **Install python-pip**
+   
+         sudo apt update
+         sudo apt install python3-pip
+         
+   - When the installation is complete, verify the installation by checking the pip version:
+      
+         pip3 --version
+    
+   - **Install docker-compose**
+
+         sudo pip install docker-compose   
 
 --------
 
