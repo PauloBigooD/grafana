@@ -20,4 +20,4 @@
 
         docker-compose build
         
- > os containers criados via `docker-compose` são "comuns", sendo assim os outros comandos do Docker também são válidos. Para maiores detalhes `docker-compose --help`       
+ > Os containers criados via `docker-compose` são "comuns", sendo assim os outros comandos do Docker também são válidos. Para maiores detalhes `docker-compose --help`       
