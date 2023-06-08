@@ -174,7 +174,7 @@ Before you install Docker Engine for the first time on a new host machine, you n
 
 ----
 
--> **Listar imagens dos containers**
+-> **Listar images dos containers**
 
     docker images [OPTIONS] [REPOSITORY[:TAG]]
 
@@ -194,6 +194,19 @@ Before you install Docker Engine for the first time on a new host machine, you n
 
 ---- 
 
+-> **Remover uma ou mais images**
+
+    docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+-- Options:
+
+`-f, --force`     -> Force the removal a image
+
+`--no-prune`      -> Do not delete untagged parents
+
+
+----
+
 -> **Verificar uso do container**
     
     docker stats [OPTIONS] [CONTAINER...]
@@ -207,6 +220,28 @@ Before you install Docker Engine for the first time on a new host machine, you n
 `--no-stream`       -> Disable streaming stats and only pull the first result
 
 `--no-trunc`        -> Do not truncate output
+
+----
+
+-> **Verificar logs do container**
+    
+    docker logs [OPTIONS] CONTAINER
+
+-- Options:
+
+`--details`              -> Show extra details provided to logs
+      
+`-f, --follow`           -> Follow log output
+
+`--since string`     -> Show logs since timestamp (e.g. "2013-01-02T13:23:37Z") or
+                       relative (e.g. "42m" for 42 minutes)
+
+`-n, --tail string`      -> Number of lines to show from the end of the logs (default "all")
+
+`-t, --timestamps`       -> Show timestamps
+
+`--until string`     -> Show logs before a timestamp (e.g. "2013-01-02T13:23:37Z") or
+                       relative (e.g. "42m" for 42 minutes
 
 ----
 
@@ -301,8 +336,6 @@ Before you install Docker Engine for the first time on a new host machine, you n
 
 ----
 
--> **Clusterização das aplicações em uma orquestração de várias containers**
+> Fonte : [![Docker](https://img.shields.io/badge/Docker-2496ED?style=plastic&logo=docker&logoColor=white)](https://docs.docker.com/engine/reference/commandline/docker/)
 
-----
 
-Fonte : https://docs.docker.com/engine/reference/commandline/docker/
