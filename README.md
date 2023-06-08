@@ -2,7 +2,7 @@
 
 ---------------------------------------------------------------
 
-### Install Grafana on Debian or Ubuntu
+### Install Grafana on [![Debian](https://img.shields.io/badge/Debian-gray?style=plastic&logo=Debian&logoColor=red)](https://www.debian.org/) or [![Ubuntu](https://img.shields.io/badge/Ubuntu-black?style=plastic&logo=Ubuntu&logoColor=write)](https://ubuntu.com/)
 
 - This topic explains how to install Grafana dependencies, install Grafana on Linux Debian or Ubuntu, and start the Grafana server on your Debian or Ubuntu system.
 
@@ -37,6 +37,7 @@
       # Install the latest Enterprise release:
       sudo apt-get install grafana-enterprise
       
->Source: https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/#install-from-apt-repository
+> Source: [![Grafana](https://img.shields.io/badge/Grafana-F4FA58?style=plastic&logo=grafana&logoColor=write)](https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/#install-from-apt-repository)
 
-![](https://uploaddeimagens.com.br/images/004/463/466/full/st_small_507x507-pad_600x600_f8f8f8-removebg-preview_%281%29.png?1683896989)
+<img align="right" width="100" height="100" src="https://uploaddeimagens.com.br/images/004/463/466/full/st_small_507x507-pad_600x600_f8f8f8-removebg-preview_%281%29.png?1683896989">
+
