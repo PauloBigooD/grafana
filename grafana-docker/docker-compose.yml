@@ -1,0 +1,32 @@
+version: "3.8"
+
+networks:
+  network-grafana:
+    driver: bridge
+    ipam:
+        config:
+            - subnet: 172.18.0.0/24
+              gateway: 172.18.0.1
+
+services:
+
+  grafana:
+    container_name: grafana-server
+    image: grafana/grafana:latest-ubuntu                         # Modify according to the desired image version
+    networks:
+      - network-grafana
+    ports:
+      - '3000:3000'                                              # By default Grafana uses port 3000, if necessary it can be changed. Example 3030:3000 - external-port:internal-port 
+    restart: always
+    environment:
+      GF_INSTALL_PLUGINS: alexanderzobnin-zabbix-app,grafana-piechart-panel,yesoreyeram-boomtable-panel,grafana-worldmap-panel,grafana-clock-panel,yesoreyeram-boomtheme-panel,briangann-gauge-panel,agenty-flowcharting-panel
+      GF_SECURITY_ADMIN_PASSWORD: Grafana                        # Grafana admin user access password
+      GF_USERS_DEFAULT_THEME: dark                               # Defining Grafana theme
+      TZ: America/Recife                                         # Defining time zone
+    volumes:
+      - grafana:/var/lib/grafana
+      - ./grafana/provisioning/:/etc/grafana/provisioning/
+
+volumes:
+
+  grafana:
