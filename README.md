@@ -1,8 +1,58 @@
-![](https://grafana.com/static/assets/internal/grafana_logo-web-white-text.svg)
+## What is  ![](https://grafana.com/static/assets/internal/grafana_logo-web-white-text.svg) ?
 
----------------------------------------------------------------
 
-### Install Grafana on [![Debian](https://img.shields.io/badge/Debian-gray?style=plastic&logo=Debian&logoColor=red)](https://www.debian.org/) or [![Ubuntu](https://img.shields.io/badge/Ubuntu-black?style=plastic&logo=Ubuntu&logoColor=write)](https://ubuntu.com/)
+Grafana is a powerful tool for real-time data analysis. The platform is highly customizable, allowing users to create dashboards with different types of graphs, tables, alerts and interactive panels. Grafana supports a wide variety of data sources, including relational databases, NoSQL, monitoring systems, and other cloud services. In addition, it has an active community and a large number of plugins and integrations available.
+
+**The Grafana installation can be installed in three ways:**
+
+- Installation from source code
+- Installation from packages
+- Docker Image
+
+---
+`Whichever installation method you choose, the process is generally well documented and can easily be found in the official Grafana documentation.` 
+
+Source:  ![](https://img.shields.io/badge/Grafana-F4FA58?style=plastic&logo=grafana&logoColor=write)
+
+
+## Installation of Grafana using Docker containers.
+
+
+### Install [![Docker](https://img.shields.io/badge/Docker-2496ED?style=plastic&logo=docker&logoColor=white)]() Engine on Ubuntu
+
+**OS requirements🔗**
+
++ **To install Docker Engine, you need the 64-bit version of one of these Ubuntu versions:**
+
+    * Ubuntu Lunar 23.04
+    * Ubuntu Kinetic 22.10
+    * Ubuntu Jammy 22.04 (LTS)
+    * Ubuntu Focal 20.04 (LTS)
+    * Ubuntu Bionic 18.04 (LTS)
+ 
++ Docker Engine is compatible with `x86_64` (or `amd64`), `armhf`, `arm64`, and `s390x` architectures.
+
+#### Uninstall old versions
+
+Older versions of Docker went by the names of `docker`, `docker.io`, or `docker-engine`, you might also have installations of `containerd` or `runc.` Uninstall any such older versions before attempting to install a new version:
+
+    sudo apt-get remove docker docker-engine docker.io containerd runc
+
+> `apt-get` might report that you have none of these packages installed.
+
+Images, containers, volumes, and networks stored in `/var/lib/docker/` aren’t automatically removed when you uninstall Docker. If you want to start with a clean installation, and prefer to clean up any existing data, read the uninstall Docker Engine section.
+
+### Install using shell script
+
+If you wish, there is the option to run the automatic Docker installation script `install-docker.sh`. After accessing the **zabbix/zabbix-server-docker** repository, type the following command:
+
+      ./install-docker.sh
+
+Now just wait for the installation to finish!
+
+---
+## Install Grafana using the apt repository
+ on [![Debian](https://img.shields.io/badge/Debian-gray?style=plastic&logo=Debian&logoColor=red)](https://www.debian.org/) or [![Ubuntu](https://img.shields.io/badge/Ubuntu-black?style=plastic&logo=Ubuntu&logoColor=write)](https://ubuntu.com/)
 
 - This topic explains how to install Grafana dependencies, install Grafana on Linux Debian or Ubuntu, and start the Grafana server on your Debian or Ubuntu system.
 
